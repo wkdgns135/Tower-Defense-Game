@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tower Defense Game v1.01</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: space-between; /* 요소들을 좌우로 분산 배치 */
+            align-items: center; /* 요소들을 수직으로 가운데 정렬 */
+        }
+        canvas {
+            flex: 1;
+            order: 2;
+        }
+
+        #ui-container-left {
+            flex: 1;
+            order: 1;
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+        }
+        #ui-container-right {
+            flex: 1;
+            order: 3;
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+        }
+        img{
+            width: 50px;
+            height: 50px;
+        }
+        table{
+            margin: 0 auto;
+            border-collapse: separate; /* 테두리 간격을 설정하기 위해 border-collapse 사용 */
+            border-spacing: 30px; /* td 요소 간격 설정 */
+        }
+    </style>
+</head>
+<body>
+    <div id="ui-container-left">
+        <p>경과 시간: <span id="elapsed-time">0</span> 초</p>
+        <p>남은 라운드 시간: <span id="current-round-time">0</span> 초</p>
+        <p>현재 골드: <span id="current-gold">0</span> 골드</p>
+        <p>적 처치 횟수: <span id="enemy-count">0</span></p>
+        <p>라운드: <span id="current-round">1</span></p>
+    </div>
+
+    <div id="ui-container-right">
+        <table>
+            <tr>
+                <td>
+                    <img id="tower_1_normal">
+                    <div id="tower_1_normal_text">데미지: 100</div>
+                </td>
+                <td>
+                    <img id="tower_2_normal">
+                    <div id="tower_2_normal_text">데미지: 100</div>
+                </td>
+                <td>
+                    <img id="tower_3_normal">
+                    <div id="tower_3_normal_text">데미지: 100</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img id="tower_1_rare">
+                    <div id="tower_1_rare_text">데미지: 100</div>
+                </td>
+                <td>
+                    <img id="tower_2_rare">
+                    <div id="tower_2_rare_text">데미지: 100</div>
+                </td>
+                <td>
+                    <img id="tower_3_rare">
+                    <div id="tower_3_rare_text">데미지: 100</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img id="tower_1_epic">
+                    <div id="tower_1_epic_text">데미지: 100</div>
+                </td>
+                <td>
+                    <img id="tower_2_epic">
+                    <div id="tower_2_epic_text">데미지: 100</div>
+                </td>
+                <td>
+                    <img id="tower_3_epic">
+                    <div id="tower_3_epic_text">데미지: 100</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img id="tower_1_legend">
+                    <div id="tower_1_legend_text">데미지: 100</div>
+                </td>
+                <td>
+                    <img id="tower_2_legend">
+                    <div id="tower_2_legend_text">데미지: 100</div>
+                </td>
+                <td>
+                    <img id="tower_3_legend">
+                    <div id="tower_3_legend_text">데미지: 100</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img id="tower_1_myth">
+                    <div id="tower_1_myth_text">데미지: 100</div>
+                </td>
+                <td>
+                    <img id="tower_2_myth">
+                    <div id="tower_2_myth_text">데미지: 100</div>
+                </td>
+                <td>
+                    <img id="tower_3_myth">
+                    <div id="tower_3_myth_text">데미지: 100</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img id="tower_1_transcendent">
+                    <div id="tower_1_transcendent_text">데미지: 100</div>
+                </td>
+                <td>
+                    <img id="tower_2_transcendent">
+                    <div id="tower_2_transcendent_text">데미지: 100</div>
+                </td>
+                <td>
+                    <img id="tower_3_transcendent">
+                    <div id="tower_3_transcendent_text">데미지: 100</div>
+                </td>
+            </tr>
+        </table>
+        <!-- 다른 타워 정보도 추가해주세요 -->
+    </div>
+</body>
+</html>
