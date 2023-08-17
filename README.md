@@ -1,6 +1,7 @@
 # Tower-Defense-Game
 ## play to https://wkdgns135.github.io/
 
+### Game rule
 <table>
     <tr>
         <td align="center">
@@ -25,3 +26,6 @@
         </td>
     </tr>
 </table>
+
+<p>적이 150마리를 초과하거나 </p>
+<p>10라운드마다 보스가 등장하며 보스 라운드가 종료될 때까지 보스를 포함한 모든 적을 처치하지 못하면 패배</p>
