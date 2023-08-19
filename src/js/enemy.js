@@ -157,7 +157,7 @@ export function timer_update(scene, GameManager, Spawner){
         Spawner.time = scene.time.now + 500; // 0.5초 마다 한번 호출
         Spawner.timer += 500;
         if(Spawner.timer % 1000 == 0){ // 1초마다 텍스트 업데이트
-            Spawner.timerText.innerText = Spawner.timer / 1000; 
+            Spawner.timerText.innerText = Math.floor(scene.time.now / 1000); 
             Spawner.currentRoundTimeText.innerText = 60 - (Spawner.timer / 1000 % 60);
             if(Spawner.timer / 1000 % 60 == 0){
                 start_round(scene, GameManager, Spawner);

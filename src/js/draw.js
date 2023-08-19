@@ -47,6 +47,10 @@ import round_bgm_3 from "../assets/sounds/bgm/round_3.ogg";
 
 
 export function draw_init(scene) {
+    document.getElementById("dice").src = dicePng;
+    document.getElementById("bin").src = binPng;
+    document.getElementById("upgrade").src = upgradePng;
+
     scene.load.image('dice', dicePng);
     scene.load.image('bin', binPng);
     scene.load.image('upgrade', upgradePng);

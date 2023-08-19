@@ -18,8 +18,8 @@ function keyDown(scene, event){ // for test
         console.log(Spawner);
     }
 
-    if(developCommand1 &&  developCommand2 &&event.key == ']'){
-        update_timer(scene, GameManager, Spawner);
+    if(event.key == ' '){
+        Spawner.time-=500;
     }
 }
 

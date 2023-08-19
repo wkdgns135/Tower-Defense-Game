@@ -44,57 +44,36 @@
 </head>
 <body>
     <div id="ui-container-left">
+        <h3>게임 정보</h3>
         <p>경과 시간: <span id="elapsed-time">0</span> 초</p>
         <p>남은 라운드 시간: <span id="current-round-time">0</span> 초</p>
         <p>현재 골드: <span id="current-gold">0</span> 골드</p>
         <p>적 처치 횟수: <span id="enemy-count">0</span></p>
         <p>라운드: <span id="current-round">1</span></p>
+
+        <h3><br>게임 설명</h3>
+        <table>
+            <tr>
+                <td><img id = "dice"></td>
+                <td colspan="2">클릭시 50골드를 소모하여 타워 생성</td>
+            </tr>
+            <tr>
+                <td><img id = "bin"></td>
+                <td colspan="2">타워를 드래그앤 드롭시 해당 타워를 판매하여 일정량 골드 획득</td>
+            </tr>
+            <tr>
+                <td><img id = "upgrade"></td>
+                <td colspan="2">타워를 드래그앤 드롭시 해당 타워를 희생하여 해당 클래스의 타워 업그레이드</td>
+            </tr>
+            <tr>
+                <th>패배 조건</th>
+                <td colspan="2">적이 150마리를 초과하거나 10라운드마다 등장하는 보스를 처치하지 못할시 패배</td>
+            </tr>
+        </table>
     </div>
 
     <div id="ui-container-right">
-        <table>
-            <tr><td>타워 등장 확률</td></tr>
-            <tr>
-                <td>
-                    노말
-                </td>
-                <td>
-                    레어
-                </td>
-                <td>
-                    에픽
-                </td>
-                <td>
-                    전설
-                </td>
-                <td>
-                    신화
-                </td>
-                <td>
-                    초월
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    50%
-                </td>
-                <td>
-                    30%
-                </td>
-                <td>
-                    15%
-                </td>
-                <td>
-                    4.5%
-                </td>
-                <td>
-                    0.4%
-                </td>
-                <td>
-                    0.1%
-                </td>
-            </tr>
-            </table>
+        <h3>타워 종류</h3>
         <table>
             <tr>
                 <td>
@@ -181,6 +160,49 @@
                 </td>
             </tr>
         </table>
+        <table>
+            <tr><td colspan="6"><h3>타워 등장 확률</h3></td></tr>
+            <tr>
+                <td>
+                    노말
+                </td>
+                <td>
+                    레어
+                </td>
+                <td>
+                    에픽
+                </td>
+                <td>
+                    전설
+                </td>
+                <td>
+                    신화
+                </td>
+                <td>
+                    초월
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    50%
+                </td>
+                <td>
+                    30%
+                </td>
+                <td>
+                    15%
+                </td>
+                <td>
+                    4.5%
+                </td>
+                <td>
+                    0.4%
+                </td>
+                <td>
+                    0.1%
+                </td>
+            </tr>
+            </table>
         <!-- 다른 타워 정보도 추가해주세요 -->
     </div>
 </body>
