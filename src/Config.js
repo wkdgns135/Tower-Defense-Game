@@ -17,6 +17,7 @@ const Config = {
             debug: process.env.DEBUG === "true",
         },
     },
+    runUpdate: true
 };
 
 export default Config;
