@@ -1,5 +1,5 @@
 import Phaser, { Game } from 'phaser';
-import { enemy_init, enemy_update, start_round , update_timer} from '../js/enemy.js'; // enemy 모듈에서 필요한 함수들 임포트
+import { enemy_init, enemy_update, start_round , timer_update} from '../js/enemy.js'; // enemy 모듈에서 필요한 함수들 임포트
 import { tower_init, wait_tower_create,tower_update, bullet_update, tower_update_text } from '../js/tower.js'; // tower 모듈에서 필요한 함수들 임포트
 import { draw_background, draw_create, draw_init } from '../js/draw.js'; // background 모듈에서 필요한 함수 임포트
 
@@ -21,11 +21,6 @@ function keyDown(scene, event){ // for test
     if(developCommand1 &&  developCommand2 &&event.key == ']'){
         update_timer(scene, GameManager, Spawner);
     }
-}
-
-function gameStart(scene){
-    Spawner.timer = setInterval(() => update_timer(scene, GameManager, Spawner), 500); // Start timer
-    GameManager.bgm = scene.sound.add('round_bgm_0', { loop: true });
 }
 
 
@@ -55,12 +50,11 @@ export default class MainScene extends Phaser.Scene {
         };
 
         Spawner = {
-            time:-5000, // 5초 지연 시작
+            time:0, // 5초 지연 시작
+            timer:-5000,
             currentRound:0,
             currentRoundText:document.getElementById('current-round'),
             currentRoundTimeText:document.getElementById('current-round-time'),
-            SpawnTimer:null,
-            timer:null,
             timerText:document.getElementById('elapsed-time'),
             numEnemies:100,
             spawnEnemies:0
@@ -103,12 +97,13 @@ export default class MainScene extends Phaser.Scene {
         draw_background(this, GameManager);
         draw_create(this, GameManager);
         tower_update_text(GameManager);
-        gameStart(this);
+        GameManager.bgm = this.sound.add('round_bgm_0', { loop: true });
     }
 
     update(){
         enemy_update(this, GameManager);
         tower_update(this, GameManager);
         bullet_update(this, GameManager);
+        timer_update(this, GameManager, Spawner);
     }
 }
