@@ -47,6 +47,7 @@ import dead_effect_2 from "../assets/images/effect/dead_effect_2.png";
 import dead_effect_3 from "../assets/images/effect/dead_effect_3.png";
 import dead_effect_4 from "../assets/images/effect/dead_effect_4.png";
 
+
 export function tower_init(scene){
     document.getElementById("tower_1_normal").src = tower_1_normal;
     document.getElementById("tower_1_rare").src = tower_1_rare;
