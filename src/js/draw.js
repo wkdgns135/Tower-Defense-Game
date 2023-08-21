@@ -250,7 +250,7 @@ function dice_btn_on_click(scene, GameManager){
         const selectClass = get_random_value_with_probability(towerClass, towerClassProb);
 
         const towerType = ['normal', 'rare', 'epic', 'legend', 'myth', 'transcendent'];
-        const towerTypeProb = [0.5, 0.3, 0.15, 0.045, 0.004, 0.001];
+        const towerTypeProb = [0.5, 0.3, 0.15, 0.04, 0.009, 0.001];
 
         const selectedType = get_random_value_with_probability(towerType, towerTypeProb);        
         wait_tower_create(scene, GameManager, selectClass, selectedType);
